@@ -98,8 +98,14 @@ set background=dark
 colorscheme earendel
 
 " TextMate saves-all on losing focus so let's do that in Vim too
-autocmd FocusLost silent! wall
+autocmd FocusLost * silent! wall
 
 if filereadable(expand("~/.vim/ruby.vimrc"))
   source ~/.vim/ruby.vimrc
 endif
+
+" Configuration for NERDTree plugin
+
+let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+map <Leader>n :NERDTreeToggle<CR>
+
