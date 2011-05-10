@@ -1,5 +1,4 @@
-" Do this first as it changes how things work in what follows
-set nocompatible
+" Do this first as it changes how things work in what follows set nocompatible
 
 " Comma is in a fixed position and easier to type than \
 let mapleader = ","
@@ -93,6 +92,10 @@ nmap <leader>l :set list!<CR>
 " Tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+
+" Color scheme setup
+set background=dark
+colorscheme earendel
 
 " TextMate saves-all on losing focus so let's do that in Vim too
 autocmd FocusLost silent! wall
