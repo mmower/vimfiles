@@ -35,6 +35,9 @@ set hidden
 " Show line numbers.
 set number
 
+" Show relative line numbers to make it easier to form commands
+set relativenumber
+
 " Show cursor position.
 set ruler
 
@@ -46,9 +49,6 @@ set ttyfast
 
 " Show the status line all the time
 set laststatus=2
-
-" Show relative line numbers to make it easier to form commands
-set relativenumber
 
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
@@ -102,9 +102,6 @@ set ignorecase
 " But case-sensitive if expression contains a capital letter.
 set smartcase
 
-" Make it easy to get rid of matches when we're doing searching
-nnoremap <leader><space> :noh<cr>
-
 " Whitespace stuff
 set nowrap
 set tabstop=2
@@ -114,18 +111,15 @@ set expandtab
 set listchars=tab:▸\ ,eol:¬,trail:·
 set autoindent
 
-" Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR>
-
 " Tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " Learn good behaviour
-"nnoremap <up> <nop>
-"nnoremap <down> <nop>
-"nnoremap <left> <nop>
-"nnoremap <right> <nop>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
@@ -143,7 +137,35 @@ if filereadable(expand("~/.vim/ruby.vimrc"))
 endif
 
 " Configuration for NERDTree plugin
-
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
+
+
+" Leader mappings
+
+" Toggle NERDTree on off as needed
+nnoremap <leader>n :NERDTreeToggle<cr>
+
+" Shortcut to rapidly toggle `set list`
+nnoremap <leader>l :set list!<cr>
+
+" Make it easy to get rid of matches when we're doing searching
+nnoremap <leader><space> :noh<cr>
+
+" Remove trailing whitespace from all lines
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+
+" Reselect pasted text to operate on
+nnoremap <leader>v V`]
+
+" Create a new vertical split and switch to it
+nnoremap <leader>w <C-w>v<C-w>l
+
+" Show relative line numbers
+nnoremap <leader>r :set relativenumber<cr>
+
+" Make it simpler to navigate window splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
