@@ -34,3 +34,9 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "rebundle/sparkup"]
+	path = rebundle/sparkup
+	url = https://github.com/rstacruz/sparkup
+[submodule "bundle/autotag"]
+	path = bundle/autotag
+	url = git://github.com/vim-scripts/AutoTag.git
