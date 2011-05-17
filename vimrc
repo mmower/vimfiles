@@ -1,5 +1,4 @@
-" Do this first as it changes how things work in what follows
-set nocompatible
+" Do this first as it changes how things work in what follows set nocompatible
 
 " I don't anticipate using modelines so let's avoid any exploits
 set modelines=0
@@ -138,11 +137,13 @@ endif
 " Configuration for NERDTree plugin
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 
-
 " Leader mappings
 
 " Toggle NERDTree on off as needed
 nnoremap <leader>n :NERDTreeToggle<cr>
+
+" Use Tagbar
+nnoremap <leader>t :TagbarOpenAutoClose<cr>
 
 " Shortcut to rapidly toggle `set list`
 nnoremap <leader>l :set list!<cr>
