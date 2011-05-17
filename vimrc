@@ -108,7 +108,6 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set listchars=tab:▸\ ,eol:¬,trail:·
 set autoindent
 
 " Tab completion
