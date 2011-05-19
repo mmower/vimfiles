@@ -31,9 +31,6 @@
 [submodule "bundle/colors-solarized"]
 	path = bundle/colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
 [submodule "rebundle/sparkup"]
 	path = rebundle/sparkup
 	url = https://github.com/rstacruz/sparkup
@@ -46,3 +43,6 @@
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/tcomment"]
+	path = bundle/tcomment
+	url = git://github.com/tomtom/tcomment_vim.git
