@@ -137,6 +137,9 @@ endif
 " Configuration for NERDTree plugin
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 
+" Configuration for EasyMotion plugin
+let g:EasyMotion_leader_key = '<Leader>m'
+
 " Leader mappings
 
 " Toggle NERDTree on off as needed
