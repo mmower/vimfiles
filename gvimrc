@@ -2,7 +2,7 @@
 set guioptions=aAce
 
 " Best editor font at the moment
-set gfn=Mensch\ Regular:h13
+set gfn=Mensch\ Regular:h12
 
 set listchars=tab:▸\ ,eol:¬,trail:·
 
