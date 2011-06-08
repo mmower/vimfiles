@@ -140,6 +140,9 @@ let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 " Configuration for EasyMotion plugin
 let g:EasyMotion_leader_key = '<Leader>m'
 
+" Configuration for tcomment plugin
+let g:tCommentBlankLines = 1
+
 " Leader mappings
 
 " Toggle NERDTree on off as needed
